@@ -6,6 +6,7 @@ import json
 import joblib
 import warnings
 import logging
+import re
 
 if __name__ == "__main__":
 
@@ -26,6 +27,7 @@ if __name__ == "__main__":
     pred_data_path = config["data"]["prediction_path"]
 
     test_data = pd.read_csv(test_data_path, sep=config["data"]["separator"]).rename(columns = {config["data"]["target"] : "target"})
+    test_data = test_data.rename(columns = lambda x:re.sub('[^A-Za-z0-9_]+', '', x))
     testX = test_data[[col for col in test_data.columns if col != "target"]]
 
     logging.info("Finished loading test data")
