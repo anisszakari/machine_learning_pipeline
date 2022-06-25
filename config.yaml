@@ -8,7 +8,7 @@ data:
 
 # List of feature engineering processes to run
 feature_engineering:
-    - BucketizeTargetEncode #(Too slow)
+    - BucketizeTargetEncode
     - FeatureBucketize
     - TargetEncode
 
