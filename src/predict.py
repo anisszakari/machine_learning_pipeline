@@ -25,7 +25,7 @@ if __name__ == "__main__":
     test_data_path = config["data"]["test_data"]
     pred_data_path = config["data"]["prediction_path"]
 
-    test_data = pd.read_csv(test_data_path, sep=';')
+    test_data = pd.read_csv(test_data_path, sep=config["data"]["separator"]).rename(columns = {config["data"]["target"] : "target"})
     testX = test_data[[col for col in test_data.columns if col != "target"]]
 
     logging.info("Finished loading test data")

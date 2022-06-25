@@ -3,6 +3,8 @@ data:
   train_data: "data/train.csv"
   test_data: "data/test.csv"
   prediction_path: "data/pred.csv"
+  separator : ";"
+  target : "target"
 
 # List of feature engineering processes to run
 feature_engineering:
