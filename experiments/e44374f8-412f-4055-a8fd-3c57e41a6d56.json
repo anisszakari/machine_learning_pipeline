@@ -3,17 +3,17 @@
         {
             "fold_results": [
                 {
-                    "feature_engineering_pipeline_id": "acd216c1-0c8d-43ff-9cc8-047ec08752e7",
+                    "feature_engineering_pipeline_id": "6dbcffaa-5ff2-4d53-8ff9-28dfc98d2862",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "90e5ac6b-2590-482d-b169-6dcc06b62d4f",
+                    "model_id": "c2aff352-325e-4cab-9cca-55282c9799f2",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.01,
                         "max_depth": 5,
@@ -120,17 +120,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "e9800849-b2d2-45ec-af6b-c49d1d4b7268",
+                    "feature_engineering_pipeline_id": "01eafb58-7948-449e-adc5-e71df6e56b37",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "9183f376-49a9-4d1a-a46e-b17175e6193f",
+                    "model_id": "185ad8ce-d5e7-4f69-877b-9ac8ce0317a5",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.01,
                         "max_depth": 5,
@@ -237,17 +237,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "e90d8fe5-4c7b-4555-8233-91a9ef594de9",
+                    "feature_engineering_pipeline_id": "8213b527-7fd1-4722-a560-35e531ba4baa",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "48a4bcc5-1c97-415b-9d49-763d3b1cc6cc",
+                    "model_id": "dc9f36de-1f09-4ecb-8d53-afb452aa4367",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.01,
                         "max_depth": 5,
@@ -354,17 +354,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "c6095ee1-6a98-4c2e-bbe1-45310a17e87c",
+                    "feature_engineering_pipeline_id": "c30f1135-4e12-4235-92f4-ae7f807e73f4",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "b0b52012-ac46-43e4-bf0f-01a78b80e327",
+                    "model_id": "235a5df2-6d27-4de0-9169-749a6583b2b3",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.01,
                         "max_depth": 5,
@@ -471,17 +471,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "1bc0bf48-e4a1-41f7-aa00-acbf79a08a1c",
+                    "feature_engineering_pipeline_id": "01089066-4d90-45c9-b1ac-7c0bd7a4adf4",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "bae42db0-c613-403f-91f0-24912ab52754",
+                    "model_id": "3977d9a5-234d-42f7-9413-0a8dc7c79995",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.01,
                         "max_depth": 5,
@@ -693,17 +693,17 @@
         {
             "fold_results": [
                 {
-                    "feature_engineering_pipeline_id": "94d214ae-b303-4225-b956-7c447a5d4d82",
+                    "feature_engineering_pipeline_id": "13a6a87d-8218-42b2-ab22-b5e5eccef3bc",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "287d7212-e3a7-4f69-847a-b7aa7a95c30e",
+                    "model_id": "a7d5259f-737f-44f7-94ab-661dc690119a",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.1,
                         "max_depth": 5,
@@ -810,17 +810,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "3d57b3be-e387-4c9d-84cd-0e68e559424e",
+                    "feature_engineering_pipeline_id": "f87973c7-4484-4aac-a96f-8476637e99f5",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "1085546b-d74c-4d63-ab18-b41850a03073",
+                    "model_id": "fe69a90d-e9c6-4afc-96b3-39d17476e8a8",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.1,
                         "max_depth": 5,
@@ -927,17 +927,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "5c6fa100-5102-473e-bde4-5dedbd902dea",
+                    "feature_engineering_pipeline_id": "f31d152c-0eb3-4be8-845d-78adaccc10e3",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "3c03b434-d070-4c01-83cd-3a7658c355b1",
+                    "model_id": "bdc5a214-4c37-43ac-b03e-c8067030c18d",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.1,
                         "max_depth": 5,
@@ -1044,17 +1044,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "1fa09c72-e10a-44d8-b912-67d09438f05e",
+                    "feature_engineering_pipeline_id": "9644510c-37c7-44b5-a6e1-bcecf1bab323",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "7a834427-c05d-47d6-a248-c239aa620383",
+                    "model_id": "5423155a-d8fd-4218-87c5-c5fcad7bd639",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.1,
                         "max_depth": 5,
@@ -1161,17 +1161,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "15065e4c-58f1-410d-ad16-a69a49707801",
+                    "feature_engineering_pipeline_id": "0df08333-bc3c-4a8d-874f-a16960470a83",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "e728bd0b-6503-4b57-b36f-9bcc3e9da50c",
+                    "model_id": "316bf1e5-0862-4a2d-b0e6-3c2a1ec6c5fd",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 0.1,
                         "max_depth": 5,
@@ -1383,17 +1383,17 @@
         {
             "fold_results": [
                 {
-                    "feature_engineering_pipeline_id": "9548daa1-e784-43a8-9fe9-1db66952d40b",
+                    "feature_engineering_pipeline_id": "635dbfd6-984d-487f-aeba-263fe7ce5d15",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "ced4d9f9-4208-4a93-9d82-e0ef656044c1",
+                    "model_id": "f74fcb84-bf4e-468f-b319-d705d0623ab7",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 1.0,
                         "max_depth": 5,
@@ -1500,17 +1500,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "f003a844-130d-4f34-be80-2e5740b9b67c",
+                    "feature_engineering_pipeline_id": "5c620ff5-3f11-46fb-98b4-7ea8848b9dc5",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "351d5c3d-c9c0-4267-b68a-cd3eff2dd5b3",
+                    "model_id": "6f9853a0-648f-4370-929b-678ac0df38f9",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 1.0,
                         "max_depth": 5,
@@ -1617,17 +1617,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "aa81f665-8d93-4567-9d20-6ce75828b191",
+                    "feature_engineering_pipeline_id": "7ab8e6e2-f362-421b-bbc4-0c7b30b793a4",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "1baa1833-91fc-4d53-a013-29676dd8403e",
+                    "model_id": "d7c52762-5875-4d16-9c5d-2a668c30fe69",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 1.0,
                         "max_depth": 5,
@@ -1734,17 +1734,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "15e10d90-8f5b-4d99-a36c-6cd67eadc6ae",
+                    "feature_engineering_pipeline_id": "55b66018-3f29-4618-9df8-963ec16f852a",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "6da995e6-c429-4999-9825-89801ab6ffa8",
+                    "model_id": "1b46e275-4fa6-4713-8d03-dcc2db5c5174",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 1.0,
                         "max_depth": 5,
@@ -1851,17 +1851,17 @@
                     }
                 },
                 {
-                    "feature_engineering_pipeline_id": "ee639962-e8ae-42ed-a3ad-65198a865acd",
+                    "feature_engineering_pipeline_id": "d3db76aa-8c86-45cf-a3dc-8b5a2657fbef",
                     "feature_engineering_steps": [
                         "BucketizeTargetEncode",
                         "FeatureBucketize",
                         "TargetEncode"
                     ],
-                    "model_id": "bb88abfb-4635-413d-8ddd-fea0f26b423e",
+                    "model_id": "38fb7cd0-4d5d-4d2a-9d26-8f502d83d099",
                     "model_parameters": {
                         "objective": "regression",
                         "boosting": "gbdt",
-                        "metric": "rmse",
+                        "metric": "mae",
                         "verbosity": -1,
                         "learning_rate": 1.0,
                         "max_depth": 5,
@@ -2074,17 +2074,17 @@
     "best_grid_search_run": {
         "fold_results": [
             {
-                "feature_engineering_pipeline_id": "acd216c1-0c8d-43ff-9cc8-047ec08752e7",
+                "feature_engineering_pipeline_id": "6dbcffaa-5ff2-4d53-8ff9-28dfc98d2862",
                 "feature_engineering_steps": [
                     "BucketizeTargetEncode",
                     "FeatureBucketize",
                     "TargetEncode"
                 ],
-                "model_id": "90e5ac6b-2590-482d-b169-6dcc06b62d4f",
+                "model_id": "c2aff352-325e-4cab-9cca-55282c9799f2",
                 "model_parameters": {
                     "objective": "regression",
                     "boosting": "gbdt",
-                    "metric": "rmse",
+                    "metric": "mae",
                     "verbosity": -1,
                     "learning_rate": 0.01,
                     "max_depth": 5,
@@ -2191,17 +2191,17 @@
                 }
             },
             {
-                "feature_engineering_pipeline_id": "e9800849-b2d2-45ec-af6b-c49d1d4b7268",
+                "feature_engineering_pipeline_id": "01eafb58-7948-449e-adc5-e71df6e56b37",
                 "feature_engineering_steps": [
                     "BucketizeTargetEncode",
                     "FeatureBucketize",
                     "TargetEncode"
                 ],
-                "model_id": "9183f376-49a9-4d1a-a46e-b17175e6193f",
+                "model_id": "185ad8ce-d5e7-4f69-877b-9ac8ce0317a5",
                 "model_parameters": {
                     "objective": "regression",
                     "boosting": "gbdt",
-                    "metric": "rmse",
+                    "metric": "mae",
                     "verbosity": -1,
                     "learning_rate": 0.01,
                     "max_depth": 5,
@@ -2308,17 +2308,17 @@
                 }
             },
             {
-                "feature_engineering_pipeline_id": "e90d8fe5-4c7b-4555-8233-91a9ef594de9",
+                "feature_engineering_pipeline_id": "8213b527-7fd1-4722-a560-35e531ba4baa",
                 "feature_engineering_steps": [
                     "BucketizeTargetEncode",
                     "FeatureBucketize",
                     "TargetEncode"
                 ],
-                "model_id": "48a4bcc5-1c97-415b-9d49-763d3b1cc6cc",
+                "model_id": "dc9f36de-1f09-4ecb-8d53-afb452aa4367",
                 "model_parameters": {
                     "objective": "regression",
                     "boosting": "gbdt",
-                    "metric": "rmse",
+                    "metric": "mae",
                     "verbosity": -1,
                     "learning_rate": 0.01,
                     "max_depth": 5,
@@ -2425,17 +2425,17 @@
                 }
             },
             {
-                "feature_engineering_pipeline_id": "c6095ee1-6a98-4c2e-bbe1-45310a17e87c",
+                "feature_engineering_pipeline_id": "c30f1135-4e12-4235-92f4-ae7f807e73f4",
                 "feature_engineering_steps": [
                     "BucketizeTargetEncode",
                     "FeatureBucketize",
                     "TargetEncode"
                 ],
-                "model_id": "b0b52012-ac46-43e4-bf0f-01a78b80e327",
+                "model_id": "235a5df2-6d27-4de0-9169-749a6583b2b3",
                 "model_parameters": {
                     "objective": "regression",
                     "boosting": "gbdt",
-                    "metric": "rmse",
+                    "metric": "mae",
                     "verbosity": -1,
                     "learning_rate": 0.01,
                     "max_depth": 5,
@@ -2542,17 +2542,17 @@
                 }
             },
             {
-                "feature_engineering_pipeline_id": "1bc0bf48-e4a1-41f7-aa00-acbf79a08a1c",
+                "feature_engineering_pipeline_id": "01089066-4d90-45c9-b1ac-7c0bd7a4adf4",
                 "feature_engineering_steps": [
                     "BucketizeTargetEncode",
                     "FeatureBucketize",
                     "TargetEncode"
                 ],
-                "model_id": "bae42db0-c613-403f-91f0-24912ab52754",
+                "model_id": "3977d9a5-234d-42f7-9413-0a8dc7c79995",
                 "model_parameters": {
                     "objective": "regression",
                     "boosting": "gbdt",
-                    "metric": "rmse",
+                    "metric": "mae",
                     "verbosity": -1,
                     "learning_rate": 0.01,
                     "max_depth": 5,
@@ -2761,7 +2761,7 @@
             }
         }
     },
-    "start_datetime": "2022-06-24 19:52:05.265042",
-    "end_datetime": "2022-06-24 19:52:13.059937",
+    "start_datetime": "2022-06-25 15:24:31.326651",
+    "end_datetime": "2022-06-25 15:24:41.443917",
     "train_data_path": "data/train.csv"
 }

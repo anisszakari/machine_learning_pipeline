@@ -6,7 +6,7 @@ import itertools
 import lightgbm as lgb
 import numpy as np
 from sklearn.model_selection import KFold
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, r2_score, accuracy_score
 import logging
 
 from features import create_feature_engineering_pipeline
@@ -31,9 +31,8 @@ def train_lgbm(
             train_X, train_Y
         )
         train_X = feature_engineering_pipeline.transform(train_X)
-        train_X.to_csv('feature_pipelines/data.csv')
         val_X = feature_engineering_pipeline.transform(val_X)
-        print(feature_engineering_pipeline[0])
+        
         joblib.dump(
             feature_engineering_pipeline,
             f"feature_pipelines/{feature_engineering_pipeline_id}.pkl",
@@ -45,18 +44,14 @@ def train_lgbm(
 
     # Prepare model parameteres
     model_id = str(uuid.uuid4())
-    model_params = {
-        "objective": "regression",
-        "boosting": "gbdt",
-        "metric": "rmse",
-        "verbosity": -1,
-    }
+    model_params = {}
     for param in DEFAULT_HYPERPARAMETERS.keys():
         if param in hyperparameters:
             model_params[param] = hyperparameters[param]
         else:
             model_params[param] = DEFAULT_HYPERPARAMETERS[param]
 
+    logging.info('%s', model_params)
     # Train model
     model = lgb.train(
         params=model_params,
@@ -71,7 +66,7 @@ def train_lgbm(
 
     # Compute validation rmse
     val_predictions = model.predict(val_X)
-    val_rmse = mean_squared_error(val_Y, val_predictions, squared=False)
+    val_score = mean_squared_error(val_Y, val_predictions, squared=False) if model_params['objective'] == 'regression' else accuracy_score(val_Y, val_predictions)
 
     # Compute feature importance
     feature_importance = {
@@ -90,7 +85,7 @@ def train_lgbm(
         "feature_engineering_steps": feature_engineering_steps,
         "model_id": model_id,
         "model_parameters": model_params,
-        "validation_rmse": val_rmse,
+        "validation_rmse": val_score,
         "feature_importance": feature_importance,
     }
 

@@ -14,7 +14,11 @@ num_folds: 5
 
 # Hyperparameter space to do model fune tuning in. (Grid search)
 hyperparameters:
-  # LightGBM hyperparameters to tune
+
+  objective: regression
+  boosting: gbdt
+  metric: mae
+  verbosity: -1
   learning_rate:
     - 0.01
     - 0.1
