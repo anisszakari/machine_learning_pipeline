@@ -32,7 +32,8 @@ if __name__ == "__main__":
 
     logging.info("Loading train data")
     train_data_path = config["data"]["train_data"]
-    train_data = pd.read_csv(train_data_path, sep=';')
+    train_data = pd.read_csv(train_data_path, sep=config["data"]["separator"]).rename(columns = {config["data"]["target"] : "target"})
+    print(train_data)
     trainX = train_data[[col for col in train_data.columns if col != "target"]]
     trainY = train_data["target"]
     logging.info("Finished loading train data")
