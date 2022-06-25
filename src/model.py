@@ -85,7 +85,7 @@ def train_lgbm(
         "feature_engineering_steps": feature_engineering_steps,
         "model_id": model_id,
         "model_parameters": model_params,
-        "validation_rmse": val_score,
+        "validation_score": val_score,
         "feature_importance": feature_importance,
     }
 
@@ -96,12 +96,13 @@ def train_lgbm_kfold(
     X, Y, num_folds=5, feature_engineering_steps=None, hyperparameters={}
 ):
 
+    objective  = hyperparameters['objective']
     # Prepare containers to hold train jobs confgs and metrics
     experiment_results = {
         "fold_results": [],
         "total_results": None,
     }
-    val_rmse = 0
+    val_score = 0
     feature_importance = defaultdict(list)
 
     # Prepare folds
@@ -126,13 +127,17 @@ def train_lgbm_kfold(
         experiment_results["fold_results"].append(fold_results)
 
         # Compute average val rmse from each fold rmse
-        val_rmse += fold_results["validation_rmse"] ** 2
+        if objective == "regression" :
+            val_score += fold_results["validation_score"] ** 2
+        elif objective == "classification":
+            val_score += fold_results["validation_score"]
         # Compute average feature importance from each fold feature importance
         for feature, importance in fold_results["feature_importance"].items():
             feature_importance[feature].append(importance)
 
+
     # Compute average val rmse from each fold rmse
-    val_rmse = (val_rmse / num_folds) ** 0.5
+    val_score = (val_score / num_folds) ** 0.5 if objective == "regression" else (val_score / num_folds)
     # Compute average feature importance from each fold feature importance
     for feature in feature_importance:
         feature_importance[feature] = sum(feature_importance[feature]) / len(
@@ -144,7 +149,7 @@ def train_lgbm_kfold(
 
     # Add average rmse and feature importance to run results
     experiment_results["total_results"] = {
-        "validation_rmse": val_rmse,
+        "validation_score": val_score,
         "feature_importance": feature_importance,
     }
     return experiment_results
@@ -160,6 +165,7 @@ def train_lgbm_grid_search_kfold(
 
     # preparee container for every grid search run results
     grid_search_results = {"all_grid_search_runs": [], "best_grid_search_run": None}
+    objective  = hyperparameters['objective']
 
     # Iterate over grd search space
     for grid_search_instance in itertools.product(*hyperparameters.values()):
@@ -183,12 +189,10 @@ def train_lgbm_grid_search_kfold(
         # Update best grid search run
         if grid_search_results["best_grid_search_run"] is None:
             grid_search_results["best_grid_search_run"] = experiment_results
-        elif (
-            experiment_results["total_results"]["validation_rmse"]
-            < grid_search_results["best_grid_search_run"]["total_results"][
-                "validation_rmse"
-            ]
-        ):
-            grid_search_results["best_grid_search_run"] = experiment_results
+        else :
+            if (objective == "regression") and (experiment_results["total_results"]["validation_score"] < grid_search_results["best_grid_search_run"]["total_results"]["validation_score"]):
+                grid_search_results["best_grid_search_run"] = experiment_results
+            elif (objective == "classification") and (experiment_results["total_results"]["validation_score"] > grid_search_results["best_grid_search_run"]["total_results"]["validation_score"]):
+                grid_search_results["best_grid_search_run"] = experiment_results
 
     return grid_search_results
